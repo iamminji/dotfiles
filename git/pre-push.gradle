@@ -1,0 +1,17 @@
+echo "Run pre-push hook!"
+ 
+CWD=`pwd`
+MAIN_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+ 
+cd $MAIN_DIR/../../
+ 
+./gradlew clean test
+
+RESULT=$?
+if [ $RESULT -ne 0 ]; then
+  echo
+  echo "==> Error while testing the code"
+  exit $RESULT
+fi
+ 
+exit 0
