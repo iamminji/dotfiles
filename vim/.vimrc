@@ -37,13 +37,15 @@ set laststatus=2
 set re=0
 set syn=sh
 
-syntax on
+syntax enable
 colorscheme onedark
+filetype plugin indent on
 
 " let g:onedark_termcolors=16
 "
 " Start NERDTree and put the cursor back in the other window.
 " autocmd VimEnter * NERDTree | wincmd p
 
+let g:rustfmt_command = "rustup run stable rustfmt"
 let NERDTreeShowHidden=1
 
