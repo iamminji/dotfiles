@@ -15,3 +15,6 @@ sed -i '' 's/ZSH_THEME="robbyrussell"/ZSH_THEME="agnoster"/' ~/.zshrc
 curl -sS https://starship.rs/install.sh | sh
 echo 'eval "$(starship init zsh)"' >> ~/.zshrc
 
+
+# edgedb schema
+# git clone https://github.com/edgedb/edgedb-vim ~/.vim/pack/edgedb/start/edgedb

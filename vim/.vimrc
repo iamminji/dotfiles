@@ -18,7 +18,6 @@ Plug 'itchyny/lightline.vim'
 Plug 'rust-lang/rust.vim'
 
 
-
 call plug#end()
 
 " ================ Config ====================
@@ -54,6 +53,15 @@ let g:rustfmt_command = "rustup run stable rustfmt"
 let NERDTreeShowHidden=1
 
 " vim cursor
+" " Reference chart of values:
+"   Ps = 0  -> blinking block.
+"   Ps = 1  -> blinking block (default).
+"   Ps = 2  -> steady block.
+"   Ps = 3  -> blinking underline.
+"   Ps = 4  -> steady underline.
+"   Ps = 5  -> blinking bar (xterm).
+"   Ps = 6  -> steady bar (xterm).
+ vim cursor
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_SR = "\<Esc>]50;CursorShape=2\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
@@ -61,4 +69,7 @@ let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 set ttimeout
 set ttimeoutlen=1
 set ttyfast
+
+" backspace
+set backspace=indent,eol,start
 
