@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Install brew for m1 mac
+# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/kimminji/.zprofile
+# eval "$(/opt/homebrew/bin/brew shellenv)"
+
+brew tap homebrew/cask-fonts
+brew install font-hack-nerd-font
 
 brew install zsh
 brew install httpie
@@ -12,8 +19,8 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 sed -i '' 's/ZSH_THEME="robbyrussell"/ZSH_THEME="agnoster"/' ~/.zshrc
 
 # new bash
-curl -sS https://starship.rs/install.sh | sh
-echo 'eval "$(starship init zsh)"' >> ~/.zshrc
+# brew install starship
+# echo 'eval "$(starship init zsh)"' >> ~/.zshrc
 
 
 # edgedb schema
