@@ -72,7 +72,6 @@ let NERDTreeShowHidden=1
 "   Ps = 4  -> steady underline.
 "   Ps = 5  -> blinking bar (xterm).
 "   Ps = 6  -> steady bar (xterm).
- vim cursor
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_SR = "\<Esc>]50;CursorShape=2\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
