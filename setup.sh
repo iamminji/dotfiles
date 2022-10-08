@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Install brew for m1 mac
-# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-# echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/kimminji/.zprofile
-# eval "$(/opt/homebrew/bin/brew shellenv)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/kimminji/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 brew tap homebrew/cask-fonts
 brew install font-hack-nerd-font
@@ -27,4 +27,4 @@ sed -i '' 's/ZSH_THEME="robbyrussell"/ZSH_THEME="agnoster"/' $HOME/.zshrc
 # git clone https://github.com/edgedb/edgedb-vim ~/.vim/pack/edgedb/start/edgedb
 
 # vimrc
-cp vimrc $HOME/.vimrc
+cp vim/.vimrc $HOME/.vimrc
