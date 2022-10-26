@@ -28,3 +28,8 @@ sed -i '' 's/ZSH_THEME="robbyrussell"/ZSH_THEME="agnoster"/' $HOME/.zshrc
 
 # vimrc
 cp vim/.vimrc $HOME/.vimrc
+
+
+brew install derailed/k9s/k9s
+brew install fzf
+
