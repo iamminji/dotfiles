@@ -32,4 +32,6 @@ cp vim/.vimrc $HOME/.vimrc
 
 brew install derailed/k9s/k9s
 brew install fzf
+# TODO echo -e "\n. $(brew --prefix asdf)/libexec/asdf.sh" >> ${ZDOTDIR:-~}/.zshrc
+brew install asdf
 
