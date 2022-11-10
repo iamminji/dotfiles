@@ -31,6 +31,16 @@ Plug 'rust-lang/rust.vim'
 " golang
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
+" Add maktaba and codefmt to the runtimepath.
+" (The latter must be installed before it can be used.)
+" Plug 'google/vim-maktaba'
+" Plug 'google/vim-codefmt'
+" Also add Glaive, which is used to configure codefmt's maktaba flags. See
+" `:help :Glaive` for usage.
+" Plug 'google/vim-glaive'
+
+" rainbow brackets
+Plug 'luochen1990/rainbow'
 
 call plug#end()
 
@@ -47,7 +57,6 @@ set hlsearch
 set autoread
 set fileformat=unix
 
-
 set laststatus=2
 
 set re=0
@@ -57,9 +66,9 @@ syntax enable
 colorscheme onedark
 filetype plugin indent on
 
-
 " let g:onedark_termcolors=16
-"
+let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
+
 " Start NERDTree and put the cursor back in the other window.
 " autocmd VimEnter * NERDTree | wincmd p
 
@@ -87,3 +96,15 @@ set ttyfast
 " backspace
 set backspace=indent,eol,start
 
+set smartindent
+set noexpandtab
+
+"augroup autoformat_settings
+"  autocmd FileType c,cpp,proto AutoFormatBuffer clang-format
+"  autocmd FileType go AutoFormatBuffer gofmt
+"  autocmd FileType html,css,sass,scss,less,json AutoFormatBuffer js-beautify
+"  autocmd FileType python AutoFormatBuffer autopep8
+"  autocmd FileType rust AutoFormatBuffer rustfmt
+"  autocmd FileType vue AutoFormatBuffer prettier
+"augroup END
+"
