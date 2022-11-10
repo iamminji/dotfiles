@@ -1,0 +1,9 @@
+httpie
+zsh
+font-hack-nerd-font
+starship
+derailed/k9s/k9s
+fzf
+asdf
+exa
+fd

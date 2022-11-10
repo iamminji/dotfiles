@@ -28,6 +28,9 @@ Plug 'itchyny/lightline.vim'
 " rust
 Plug 'rust-lang/rust.vim'
 
+" golang
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
 
 call plug#end()
 
@@ -60,6 +63,7 @@ filetype plugin indent on
 " Start NERDTree and put the cursor back in the other window.
 " autocmd VimEnter * NERDTree | wincmd p
 
+let g:rustfmt_autosave = 1
 let g:rustfmt_command = "rustup run stable rustfmt"
 let NERDTreeShowHidden=1
 
