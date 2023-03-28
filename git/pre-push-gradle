@@ -1,3 +1,4 @@
+#!/bin/bash
 echo "Run pre-push hook!"
  
 CWD=`pwd`
