@@ -20,6 +20,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'dense-analysis/ale'
+Plug 'jiangmiao/auto-pairs'
+
 
 " color scheme
 Plug 'joshdick/onedark.vim'
@@ -42,6 +44,13 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " rainbow brackets
 Plug 'luochen1990/rainbow'
 
+" Color scheme
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+
+" airline tab
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 call plug#end()
 
 " ================ Config ====================
@@ -51,8 +60,8 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set autoindent
-set list
-set listchars=tab:→\ ,trail:·
+" set list
+" set listchars=tab:→\ ,trail:·
 set hlsearch
 set autoread
 set fileformat=unix
@@ -64,6 +73,7 @@ set syn=sh
 
 syntax enable
 colorscheme onedark
+
 filetype plugin indent on
 
 " let g:onedark_termcolors=16
@@ -98,6 +108,22 @@ set backspace=indent,eol,start
 
 set smartindent
 set noexpandtab
+
+" set modifable
+set ma
+
+" airline setting
+" let g:airline#extensions#hunks#enabled = 1
+" let g:airline#extensions#branch#enabled = 1
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#left_sep = ' '
+" let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline_powerline_fonts = 1
+" let g:airline_section_b = '%{getcwd()}' " in section B of the status line display the CWD
+" let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline#extensions#tabline#formatter = 'default'
+
+
 
 "augroup autoformat_settings
 "  autocmd FileType c,cpp,proto AutoFormatBuffer clang-format

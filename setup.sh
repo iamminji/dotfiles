@@ -20,7 +20,23 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 
 brew install $(<package.txt)
 
+# create neovim plugin
+# sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+#       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+#
 # move my profile
-cp vimrc $HOME/.vimrc
-cp zshrc $HOME/.zshrc
+cp vimrc ${HOME}/.vimrc
+cp zshrc ${HOME}/.zshrc
+
+mkdir -p ${HOME}/.config/nvim
+
+cat <<EOF > ${HOME}/.config/nvim/init.vim
+set runtimepath+=~/.vim,~/.vim/after
+set packpath+=~/.vim
+source ~/.vimrc
+
+if has('nvim')
+  colorscheme catppuccin
+endif
+EOF
 

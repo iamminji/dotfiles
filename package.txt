@@ -7,3 +7,6 @@ fzf
 asdf
 exa
 fd
+neovim
+jq
+bat

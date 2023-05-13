@@ -104,6 +104,8 @@ plugins=(
 #
 alias et='exa --tree'
 alias es='exa --long'
+alias cat='bat'
+alias nv='nvim'
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 # echo -e "\n. $(brew --prefix asdf)/libexec/asdf.sh" >> ${ZDOTDIR:-~}/.zshrc
@@ -121,8 +123,8 @@ export FZF_ALT_C_COMMAND='fd --type d . --color=never --hidden'
 export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -50'"
 
 
-
 source $ZSH/oh-my-zsh.sh
 
-eval "$(starship init zsh)"
+export PATH="$PATH:/opt/homebrew/Cellar/flutter/bin"
 
+# eval "$(starship init zsh)"
