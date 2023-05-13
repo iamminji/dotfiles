@@ -29,6 +29,7 @@ Plug 'itchyny/lightline.vim'
 
 " rust
 Plug 'rust-lang/rust.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " golang
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
