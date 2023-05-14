@@ -105,7 +105,7 @@ plugins=(
 alias et='exa --tree'
 alias es='exa --long'
 alias cat='bat'
-alias nv='nvim'
+alias vn='nvim'
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 # echo -e "\n. $(brew --prefix asdf)/libexec/asdf.sh" >> ${ZDOTDIR:-~}/.zshrc
