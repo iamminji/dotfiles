@@ -10,3 +10,4 @@ fd
 neovim
 jq
 bat
+kustomize

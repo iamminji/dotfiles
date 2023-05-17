@@ -13,6 +13,8 @@ rustup component add rustfmt
 
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+curl -sL install-node.vercel.app/lts | bash
+
 # edgedb schema
 # git clone https://github.com/edgedb/edgedb-vim ~/.vim/pack/edgedb/start/edgedb
 

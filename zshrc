@@ -102,8 +102,8 @@ plugins=(
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-alias et='exa --tree'
-alias es='exa --long'
+alias lx='exa --long'
+alias lt='exa --tree'
 alias cat='bat'
 alias vn='nvim'
 

@@ -85,6 +85,9 @@ let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowTo
 
 let g:rustfmt_autosave = 1
 let g:rustfmt_command = "rustup run stable rustfmt"
+
+let g:coc_global_extensions = ['coc-rust-analyzer']
+
 let NERDTreeShowHidden=1
 
 " vim cursor
@@ -125,6 +128,7 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#formatter = 'default'
 
 
+nnoremap ;; A;<ESC>
 
 "augroup autoformat_settings
 "  autocmd FileType c,cpp,proto AutoFormatBuffer clang-format
